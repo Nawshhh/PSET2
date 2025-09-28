@@ -1,3 +1,4 @@
+#include "LFGSimulator.h"
 #include "Config.h"
 #include <iostream>
 
@@ -7,12 +8,8 @@ int main(int argc, char** argv) {
 
     try {
         Config cfg = Config::FromFile(cfgPath);
-        std::cout << "Instances: " << cfg.n() << "\n";
-        std::cout << "Tanks: "     << cfg.t() << "\n";
-        std::cout << "Healers: "   << cfg.h() << "\n";
-        std::cout << "DPS: "       << cfg.d() << "\n";
-        std::cout << "Level range: " << cfg.t1() << " - " << cfg.t2() << "\n";
-        
+        LFGSimulator sim(cfg);
+        sim.run();
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << "\n";
         return 1;

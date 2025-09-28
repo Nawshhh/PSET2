@@ -22,13 +22,13 @@ Config Config::FromFile(const std::string& path) {
     }
 
     Config cfg;
-    if (kv.count("n"))  cfg.n_instances_ = kv["n"];
-    if (kv.count("t"))  cfg.tanks_       = kv["t"];
-    if (kv.count("h"))  cfg.healers_     = kv["h"];
-    if (kv.count("d"))  cfg.dps_         = kv["d"];
-    if (kv.count("t1")) cfg.t1_          = kv["t1"];
-    if (kv.count("t2")) cfg.t2_          = kv["t2"];
-    if (cfg.t1_ < 1) cfg.t1_ = 1;
-    if (cfg.t2_ < cfg.t1_) cfg.t2_ = cfg.t1_;
+    if (kv.count("n"))  cfg.n_instances = kv["n"];
+    if (kv.count("t"))  cfg.tanks       = kv["t"];
+    if (kv.count("h"))  cfg.healers     = kv["h"];
+    if (kv.count("d"))  cfg.dps         = kv["d"];
+    if (kv.count("t1")) cfg.time1          = kv["t1"];
+    if (kv.count("t2")) cfg.time2          = kv["t2"];
+    if (cfg.time1 < 1) cfg.time1 = 1;
+    if (cfg.time2 < cfg.time1) cfg.time2 = cfg.time1;
     return cfg;
 }
