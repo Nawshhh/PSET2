@@ -1,10 +1,3 @@
-# n  : maximum number of concurrent instances
-# t  : number of tank players in the queue
-# h  : number of healer players in the queue
-# d  : number of DPS players in the queue
-# t1 : minimum instance clear time (seconds)
-# t2 : maximum instance clear time (seconds)
-
 n=3
 t=4
 h=4
