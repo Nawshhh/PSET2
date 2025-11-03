@@ -23,6 +23,9 @@ public:
     int healers() const;
     int dps() const;
 
+    // bonus feature 
+    void addPlayers(int t_add, int h_add, int d_add);
+
 private:
     mutable std::mutex mtx;
     int t, h, d;

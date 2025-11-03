@@ -18,6 +18,13 @@ bool QueueManager::formParty(const PartyRequirement& req) {
     return false;
 }
 
+void QueueManager::addPlayers(int t_add, int h_add, int d_add) {
+    std::lock_guard<std::mutex> lock(mtx);
+    t += t_add;
+    h += h_add;
+    d += d_add;
+}
+
 int QueueManager::tanks() const { std::lock_guard<std::mutex> lock(mtx); return t; }
 int QueueManager::healers() const { std::lock_guard<std::mutex> lock(mtx); return h; }
 int QueueManager::dps() const { std::lock_guard<std::mutex> lock(mtx); return d; }
