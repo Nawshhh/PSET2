@@ -121,7 +121,7 @@ void LFGSimulator::run() {
     }
     cout << "Total parties served: " << totalServed << "\n";
     cout << "Aggregate time served: " << totalTime << "s\n";
-    cout << "Remaining in queue: Tanks =" << queue->tanks()
-         << " Healers =" << queue->healers()
-         << " DPS =" << queue->dps() << "\n";
+    cout << "Remaining in queue: Tanks = " << queue->tanks()
+         << " Healers = " << queue->healers()
+         << " DPS = " << queue->dps() << "\n";
 }
