@@ -43,8 +43,8 @@ void LFGSimulator::run() {
     cout << "=== LFG Dungeon Queue Simulator ===\n";
     cout << "Instances: " << cfg_.n()
          << " | Queue: Tanks = " << cfg_.t()
-         << " Healers =" << cfg_.h()
-         << " DPS =" << cfg_.d()
+         << " Healers = " << cfg_.h()
+         << " DPS = " << cfg_.d()
          << " | Duration: [" << cfg_.t1() << "," << cfg_.t2() << "] sec\n\n";
 
     std::atomic<bool> stop{false};
