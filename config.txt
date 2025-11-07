@@ -1,7 +1,7 @@
-# even steven
-n=4
+# bonus
+n=3
 t=10
-h=10
-d=30
-t1=2
-t2=6
+h=1
+d=60
+t1=1
+t2=2
